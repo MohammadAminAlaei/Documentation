@@ -15,11 +15,17 @@ const {
 const createGlobalStyleWithRTL = (...args: Parameters<typeof originalCreateGlobalStyle>) => {
   return originalCreateGlobalStyle`
     * {
-  text-align:right
-  }
-  html, body {
-    direction: rtl;
-      }
+      text-align: right;
+    }
+    html, body {
+      direction: rtl;
+    }
+
+    .redoc-json, .redoc-json li {
+        text-align: left !important;
+        direction: ltr !important;
+    }
+
     ${css(...args)}
   `;
 };

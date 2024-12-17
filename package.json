@@ -57,7 +57,8 @@
     "deploy:demo": "aws s3 sync demo/dist s3://production-redoc-demo --acl=public-read",
     "license-check": "license-checker --production --onlyAllow 'MIT;ISC;Apache-2.0;BSD;BSD-2-Clause;BSD-3-Clause;CC-BY-4.0;CC0-1.0;Python-2.0 ' --summary",
     "docker:build": "docker build -f config/docker/Dockerfile -t redoc .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": ""
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.17.1",
